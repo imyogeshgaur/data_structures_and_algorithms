@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 struct tree 
 { 
     int value;
@@ -18,14 +19,15 @@ struct tree* makeNode(int data)
      return(node); 
 } 
 
-void traverse_inorder(struct tree *head)
-{
-   if(head!=NULL)
-   {
-       traverse_inorder(head->left);
-       printf("%d ",head->value);
-       traverse_inorder(head->right);
-   }
+int sizeOfTree(struct tree *head){
+     if(head==NULL){
+         return 0;
+     }
+     else
+     {
+         return(sizeOfTree(head->left) + 1 + sizeOfTree(head->right));
+     }
+     
 }
 
 int main()
@@ -35,8 +37,7 @@ int main()
   root->right = makeNode(30);
   root->right->left= makeNode(40);
   root->right->right= makeNode(50);
-  
-  printf("Our struct tree is : \n");
-  traverse_inorder(root);
+  int res = sizeOfTree(root);
+  printf("The size of the tree is %d",res);
   return 0;
 }
