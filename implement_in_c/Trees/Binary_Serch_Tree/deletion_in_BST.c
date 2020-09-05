@@ -34,6 +34,16 @@ struct tree *insertInBST(struct tree *head, int data)
     return head;
 }
 
+struct tree *getSuccessor(struct tree *temp)
+{
+  temp = temp->right;
+  while(temp !=NULL && temp->left != NULL)
+  {
+      temp = temp->left;
+  }
+  return temp;
+}
+
 struct tree *deleteInBST(struct tree *head, int data)
 {
     if (head == NULL)
@@ -62,6 +72,13 @@ struct tree *deleteInBST(struct tree *head, int data)
             free(head);
             return temp;
         }
+        else
+        {
+            struct tree *succ = getSuccessor(head);
+            head->value= succ->value;
+            head->right = deleteInBST(head->right,succ->value);
+        }
+        return head;
     }
 }
 
