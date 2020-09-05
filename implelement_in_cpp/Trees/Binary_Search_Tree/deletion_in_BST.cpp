@@ -27,6 +27,17 @@ tree *insertInBST(tree *head, int data)
     }
     return head;
 }
+
+tree *getSuccessor(tree *temp)
+{
+  temp = temp->right;
+  while(temp !=NULL && temp->left != NULL)
+  {
+      temp = temp->left;
+  }
+  return temp;
+}
+
 tree *deleteInBST(tree *head, int data)
 {
     if (head == NULL)
@@ -55,6 +66,14 @@ tree *deleteInBST(tree *head, int data)
             delete head;
             return temp;
         }
+        else
+        {
+            tree *succ = getSuccessor(head);
+            head->value= succ->value;
+            head->right = deleteInBST(head->right,succ->value);
+        }
+        return head;
+        
     }
 }
 void traverse_tree(tree *head)
