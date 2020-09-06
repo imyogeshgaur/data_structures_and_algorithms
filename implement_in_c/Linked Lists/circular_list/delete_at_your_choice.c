@@ -49,22 +49,25 @@ void traverse_list(struct yogesh *head)
     }
 }
 
-int Length(struct yogesh* head) 
-{ 
-	struct yogesh* current = head; 
-	int count = 0; 
+int Length(struct yogesh *head)
+{
+    struct yogesh *current = head;
+    int count = 0;
 
-	if (head == NULL) { 
-		return 0; 
-	} 
-	else { 
-		do { 
-			current = current->next; 
-			count++; 
-		} while (current != head); 
-	} 
-	return count; 
-} 
+    if (head == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        do
+        {
+            current = current->next;
+            count++;
+        } while (current != head);
+    }
+    return count;
+}
 
 void deleteBeg(struct yogesh **head)
 {

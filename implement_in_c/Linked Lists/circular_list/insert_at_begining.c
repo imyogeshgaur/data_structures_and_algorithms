@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct yogesh
 {
@@ -7,20 +7,24 @@ struct yogesh
     struct yogesh *next;
 };
 
-void linkedListTraversal(struct yogesh *head){
+void linkedListTraversal(struct yogesh *head)
+{
     struct yogesh *ptr = head;
-    do{
+    do
+    {
         printf("%d\n", ptr->value);
         ptr = ptr->next;
-    }while(ptr!=head);
+    } while (ptr != head);
 }
 
-struct yogesh * insertBeg(struct yogesh *head, int data){
-    struct yogesh * ptr = (struct yogesh *) malloc(sizeof(struct yogesh));
+struct yogesh *insertBeg(struct yogesh *head, int data)
+{
+    struct yogesh *ptr = (struct yogesh *)malloc(sizeof(struct yogesh));
     ptr->value = data;
 
-    struct yogesh * p = head->next;
-    while(p->next != head){
+    struct yogesh *p = head->next;
+    while (p->next != head)
+    {
         p = p->next;
     }
 
@@ -28,11 +32,11 @@ struct yogesh * insertBeg(struct yogesh *head, int data){
     ptr->next = head;
     head = ptr;
     return head;
-
 }
 
-int main(){
-    
+int main()
+{
+
     struct yogesh *head;
     struct yogesh *second;
     struct yogesh *third;

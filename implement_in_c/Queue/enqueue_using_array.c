@@ -1,23 +1,23 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define size 4
 
 int arr[size];
-int rear = - 1;
-int front = - 1;
+int rear = -1;
+int front = -1;
 
 void enqueue()
 {
-  int add_item;
-  if (rear == size-1)
-  {
-    printf("Queue Overflow \n");
-  }
+    int add_item;
+    if (rear == size - 1)
+    {
+        printf("Queue Overflow \n");
+    }
     else
     {
-        if (front == - 1)
-        front = 0;
+        if (front == -1)
+            front = 0;
         printf("Inset the element in queue : ");
         scanf("%d", &add_item);
         rear = rear + 1;
@@ -28,7 +28,7 @@ void enqueue()
 void traversal_queue()
 {
     int i;
-    if (front == - 1)
+    if (front == -1)
     {
         printf("Queue is empty \n");
     }
@@ -44,9 +44,9 @@ void traversal_queue()
 }
 int main()
 {
-   for(int i=0;i<size;i++)
-   {
-       enqueue();
-   }
-   traversal_queue();
+    for (int i = 0; i < size; i++)
+    {
+        enqueue();
+    }
+    traversal_queue();
 }

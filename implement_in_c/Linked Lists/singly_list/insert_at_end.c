@@ -10,15 +10,17 @@ struct yogesh
 struct yogesh *insertEnd(struct yogesh *head, int data)
 {
     struct yogesh *temp = (struct yogesh *)malloc(sizeof(struct yogesh));
-    temp->value=data;
-    if(head==NULL){
+    temp->value = data;
+    if (head == NULL)
+    {
         return temp;
     }
     struct yogesh *latest = head;
-    while(latest->next!=NULL){
-        latest=latest->next;
+    while (latest->next != NULL)
+    {
+        latest = latest->next;
     }
-    latest->next=temp;
+    latest->next = temp;
     return head;
 }
 

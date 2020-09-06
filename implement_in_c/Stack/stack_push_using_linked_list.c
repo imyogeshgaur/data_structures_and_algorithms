@@ -1,48 +1,53 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-struct yogesh{
+struct yogesh
+{
     int value;
     struct yogesh *next;
 };
 
 struct yogesh *top;
 
-void push(int data){
+void push(int data)
+{
     struct yogesh *a = (struct yogesh *)malloc(sizeof(struct yogesh));
-    if(!a){
+    if (!a)
+    {
         printf("Stack Overflow !!");
     }
     else
     {
         a->value = data;
         a->next = top;
-        top = a;  
+        top = a;
     }
-    
 }
 
-void traverse_stack()  
-{ 
-    struct yogesh *ptr; 
-    if (top == NULL) { 
-        printf("\nStack Underflow"); 
-    } 
-    else { 
-        ptr = top; 
-        while (ptr != NULL) { 
-            printf("%d ",ptr->value); 
+void traverse_stack()
+{
+    struct yogesh *ptr;
+    if (top == NULL)
+    {
+        printf("\nStack Underflow");
+    }
+    else
+    {
+        ptr = top;
+        while (ptr != NULL)
+        {
+            printf("%d ", ptr->value);
             ptr = ptr->next;
-        }  
-    } 
-} 
+        }
+    }
+}
 
 int main()
 {
-   push(1);
-   push(2);
-   push(3);
-   push(4);
-   printf("Elements of the stack are : \n");
-   traverse_stack();
+    push(1);
+    push(2);
+    push(3);
+    push(4);
+    printf("Elements of the stack are : \n");
+    traverse_stack();
 }

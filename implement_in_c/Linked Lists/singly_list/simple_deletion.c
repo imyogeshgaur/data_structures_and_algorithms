@@ -1,18 +1,18 @@
-#include<stdio.h>
-#include<stdlib.h>
-struct yogesh 
-{ 
-    int value;
-    struct yogesh *next;
+#include <stdio.h>
+#include <stdlib.h>
+struct yogesh
+{
+  int value;
+  struct yogesh *next;
 };
 
 void traverse_array(struct yogesh *ptr)
 {
-   while (ptr != NULL)
-    {
-       printf("%d",ptr->value);
-        ptr = ptr->next;
-    }
+  while (ptr != NULL)
+  {
+    printf("%d", ptr->value);
+    ptr = ptr->next;
+  }
 }
 
 int main()
@@ -32,7 +32,7 @@ int main()
 
   printf("Array before Deletion : \n");
   traverse_array(first);
-  first->next=third;
+  first->next = third;
   free(second);
   printf("\nArray After Deletion : \n");
   traverse_array(first);

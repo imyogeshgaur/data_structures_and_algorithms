@@ -10,27 +10,31 @@ struct yogesh
 struct yogesh *insertEnd(struct yogesh *head, int data)
 {
     struct yogesh *temp = (struct yogesh *)malloc(sizeof(struct yogesh));
-    temp->value=data;
-    if(head==NULL){
+    temp->value = data;
+    if (head == NULL)
+    {
         return temp;
     }
     struct yogesh *latest = head;
-    while(latest->next!=NULL){
-        latest=latest->next;
+    while (latest->next != NULL)
+    {
+        latest = latest->next;
     }
-    latest->next=temp;
+    latest->next = temp;
     return head;
 }
 
-struct yogesh *deleteEnd(struct yogesh *head){
+struct yogesh *deleteEnd(struct yogesh *head)
+{
     struct yogesh *a = head;
     struct yogesh *b = head->next;
 
-    while(b->next!=NULL){
+    while (b->next != NULL)
+    {
         a = a->next;
         b = b->next;
     }
-    a->next=NULL;
+    a->next = NULL;
     free(b);
     return a;
 }

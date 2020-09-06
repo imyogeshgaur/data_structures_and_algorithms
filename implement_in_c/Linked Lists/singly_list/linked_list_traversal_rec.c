@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct yogesh
 {
     int data;
@@ -8,11 +8,12 @@ struct yogesh
 
 void recursive_traversal(struct yogesh *head)
 {
-   struct yogesh *latest = head;
-    if(latest==NULL){
-        return ;
+    struct yogesh *latest = head;
+    if (latest == NULL)
+    {
+        return;
     }
-    printf("The data is : %d \n",latest->data);
+    printf("The data is : %d \n", latest->data);
     recursive_traversal(latest->next);
 }
 
@@ -38,9 +39,5 @@ int main()
     recursive_traversal(first);
 
     return 0;
-return 0;
+    return 0;
 }
-
-
-
-

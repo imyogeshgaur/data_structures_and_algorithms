@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 void selectionSort(int arr[], int n)
 {
@@ -20,7 +20,7 @@ void selectionSort(int arr[], int n)
   }
   for (i = 0; i < n; i++)
   {
-    printf("%d ",arr[i],"\n"); 
+    printf("%d ", arr[i], "\n");
   }
 }
 
@@ -28,17 +28,18 @@ int main()
 {
   int *a, search, i, size, position;
 
-    printf("Enter the number of elements in array\n");
-    scanf("%d", &size);
+  printf("Enter the number of elements in array\n");
+  scanf("%d", &size);
 
-    a = (int *)malloc(sizeof(size));
+  a = (int *)malloc(sizeof(size));
 
-    printf("Enter %d numbers\n", size);
+  printf("Enter %d numbers\n", size);
 
-    for (i = 0; i < size; i++){
-        scanf("%d", &a[i]);
-    }
-    printf("The sorted array is : \n");
-    selectionSort(a, size);
+  for (i = 0; i < size; i++)
+  {
+    scanf("%d", &a[i]);
+  }
+  printf("The sorted array is : \n");
+  selectionSort(a, size);
   return 0;
 }

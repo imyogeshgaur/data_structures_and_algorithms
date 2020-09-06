@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct yogesh
 {
     int data;
@@ -11,7 +11,7 @@ void simple_traversal(struct yogesh *head)
     struct yogesh *latest = head;
     while (latest != NULL)
     {
-        printf("The data is : %d \n",latest->data);
+        printf("The data is : %d \n", latest->data);
         latest = latest->next;
     }
 }
@@ -38,9 +38,5 @@ int main()
     simple_traversal(first);
 
     return 0;
-return 0;
+    return 0;
 }
-
-
-
-

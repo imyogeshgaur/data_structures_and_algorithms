@@ -15,15 +15,17 @@ struct yogesh *insertBeg(struct yogesh *head, int data)
     return temp;
 }
 
-struct yogesh *deleteAtChoice(struct yogesh *head,int index){
+struct yogesh *deleteAtChoice(struct yogesh *head, int index)
+{
     struct yogesh *a = head;
     struct yogesh *b = head->next;
 
-    for(int i=0 ; i<index-1;i++){
+    for (int i = 0; i < index - 1; i++)
+    {
         a = a->next;
         b = b->next;
     }
-    a->next=b->next;
+    a->next = b->next;
     free(b);
     return a;
 }
@@ -47,7 +49,7 @@ int main()
 
     printf("List before deletion : \n");
     traverse_array(first);
-    deleteAtChoice(first,2);
+    deleteAtChoice(first, 2);
     printf("List after deletion : \n");
     traverse_array(first);
     return 0;

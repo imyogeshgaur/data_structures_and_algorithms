@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 struct yogesh
 {
@@ -13,7 +13,7 @@ void travere_linked_list(struct yogesh *head)
     a = head;
     do
     {
-        printf("%d\n",a->value);
+        printf("%d\n", a->value);
         a = a->next;
     } while (a != head);
 }
@@ -30,7 +30,7 @@ struct yogesh *insertAtEnd(struct yogesh *head, int data)
     }
     ptr->next = newnode;
     newnode->next = head;
-    head=ptr;
+    head = ptr;
     return head;
 }
 
