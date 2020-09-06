@@ -47,7 +47,8 @@ int main()
     push(2);
     push(3);
     push(4);
-    cout << "Elements of the stack are : "<< " \n";
+    cout << "Elements of the stack are : "
+         << " \n";
     traverse_stack();
     return 0;
 }
