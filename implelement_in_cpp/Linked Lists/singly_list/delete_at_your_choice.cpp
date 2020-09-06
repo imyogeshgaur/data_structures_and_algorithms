@@ -15,18 +15,19 @@ yogesh *insertBeg(yogesh *head, int data)
    return temp;
 }
 
-yogesh *deleteAtChoice(yogesh *head, int index){
-    yogesh *a = head;
-    yogesh *b = head->next;
+yogesh *deleteAtChoice(yogesh *head, int index)
+{
+   yogesh *a = head;
+   yogesh *b = head->next;
 
-    for(int i = 0; i<index-1;i++){
-        a=a->next;
-        b=b->next;
-    }
-    a->next=b->next;
-    free(b);
-    return a;
-    
+   for (int i = 0; i < index - 1; i++)
+   {
+      a = a->next;
+      b = b->next;
+   }
+   a->next = b->next;
+   free(b);
+   return a;
 }
 
 void traverse_array(yogesh *ptr)
@@ -46,10 +47,10 @@ int main()
    first = insertBeg(first, 2);
    first = insertBeg(first, 1);
 
-   cout<<"The Array before deletion is : \n";
+   cout << "The Array before deletion is : \n";
    traverse_array(first);
-   deleteAtChoice(first,2);
-   cout<<"The Array after deletion is : \n";
+   deleteAtChoice(first, 2);
+   cout << "The Array after deletion is : \n";
    traverse_array(first);
    return 0;
 }
