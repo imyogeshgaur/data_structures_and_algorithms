@@ -9,11 +9,12 @@ struct yogesh
 
 void recursive_traversal(yogesh *head)
 {
-    yogesh * latest = head;
-    if(latest==NULL){
-        return ;
+    yogesh *latest = head;
+    if (latest == NULL)
+    {
+        return;
     }
-    cout<<"The data is : "<<latest->data<<"\n";
+    cout << "The data is : " << latest->data << "\n";
     recursive_traversal(latest->next);
 }
 
