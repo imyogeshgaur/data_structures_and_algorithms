@@ -10,15 +10,17 @@ struct yogesh
 yogesh *insertEnd(yogesh *head, int data)
 {
    yogesh *temp = new yogesh();
-   temp->value=data;
-   if(head==NULL){
-     return temp;
+   temp->value = data;
+   if (head == NULL)
+   {
+      return temp;
    }
    yogesh *latest = head;
-   while(latest->next!=NULL){
-       latest = latest->next;
+   while (latest->next != NULL)
+   {
+      latest = latest->next;
    }
-   latest->next=temp;
+   latest->next = temp;
    return head;
 }
 
