@@ -65,11 +65,13 @@ int main()
     push(4);
     push(500);
     push(404);
-    cout << "Elements of the stack before pop() are : "<< " \n";
+    cout << "Elements of the stack before pop() are : "
+         << " \n";
     traverse_stack();
     pop();
     pop();
-    cout<<"\nElements of the stack after pop() are : "<< " \n";
+    cout << "\nElements of the stack after pop() are : "
+         << " \n";
     traverse_stack();
     return 0;
 }
