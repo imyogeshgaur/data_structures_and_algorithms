@@ -1,18 +1,18 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-struct yogesh 
-{ 
-    int value;
-    yogesh *next;
+struct yogesh
+{
+  int value;
+  yogesh *next;
 };
 
 void traverse_array(yogesh *ptr)
 {
-   while (ptr != NULL)
-    {
-  cout << ptr->value ;
-   ptr = ptr->next;
-    }
+  while (ptr != NULL)
+  {
+    cout << ptr->value;
+    ptr = ptr->next;
+  }
 }
 
 int main()
@@ -30,10 +30,12 @@ int main()
   third->value = 3;
   third->next = NULL;
 
-  cout<<"Array before Deletion "<<"\n";
+  cout << "Array before Deletion "
+       << "\n";
   traverse_array(first);
-  first->next=third;
+  first->next = third;
   delete second;
-  cout<<"\nArray After Deletion"<<"\n";
+  cout << "\nArray After Deletion"
+       << "\n";
   traverse_array(first);
 }
