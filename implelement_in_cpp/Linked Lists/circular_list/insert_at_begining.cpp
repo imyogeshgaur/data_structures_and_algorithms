@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 struct yogesh
 {
@@ -6,20 +6,24 @@ struct yogesh
     yogesh *next;
 };
 
-void linkedListTraversal(yogesh *head){
+void linkedListTraversal(yogesh *head)
+{
     yogesh *ptr = head;
-    do{
-        cout<<ptr->value<<"\n";
+    do
+    {
+        cout << ptr->value << "\n";
         ptr = ptr->next;
-    }while(ptr!=head);
+    } while (ptr != head);
 }
 
-yogesh * insertBeg(yogesh *head, int data){
-    yogesh * ptr = new yogesh();
+yogesh *insertBeg(yogesh *head, int data)
+{
+    yogesh *ptr = new yogesh();
     ptr->value = data;
 
-    yogesh * p = head->next;
-    while(p->next != head){
+    yogesh *p = head->next;
+    while (p->next != head)
+    {
         p = p->next;
     }
 
@@ -27,12 +31,11 @@ yogesh * insertBeg(yogesh *head, int data){
     ptr->next = head;
     head = ptr;
     return head;
-
 }
 
 int main()
 {
-    
+
     yogesh *head = new yogesh();
     yogesh *second = new yogesh();
     yogesh *third = new yogesh();
@@ -50,10 +53,10 @@ int main()
     fourth->value = 4;
     fourth->next = head;
 
-    cout<<"Circular Linked list before insertion\n";
+    cout << "Circular Linked list before insertion\n";
     linkedListTraversal(head);
     head = insertBeg(head, 54);
-    cout<<"Circular Linked list after insertion\n";
+    cout << "Circular Linked list after insertion\n";
     linkedListTraversal(head);
     return 0;
 }
